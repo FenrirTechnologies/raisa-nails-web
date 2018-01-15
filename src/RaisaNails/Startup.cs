@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using RaisaNails.Data;
 using RaisaNails.Services;
 using RaisaNails.Users;
+using RaisaNails.Appointments;
 
 namespace RaisaNails
 {
@@ -33,6 +29,11 @@ namespace RaisaNails
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddData();
+            services.AddUsers();
+            services.AddServices();
+            services.AddAppointments();
 
             services.AddMvc()
                 .AddRazorPagesOptions(options =>

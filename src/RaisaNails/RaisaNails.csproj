@@ -14,7 +14,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RaisaNails.Appointments\RaisaNails.Appointments.csproj" />
     <ProjectReference Include="..\RaisaNails.Data\RaisaNails.Data.csproj" />
+    <ProjectReference Include="..\RaisaNails.Services\RaisaNails.Services.csproj" />
     <ProjectReference Include="..\RaisaNails.Users\RaisaNails.Users.csproj" />
   </ItemGroup>
 </Project>
