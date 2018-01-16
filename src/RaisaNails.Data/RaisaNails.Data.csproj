@@ -15,8 +15,13 @@
   
   <ItemGroup>
     <ProjectReference Include="..\RaisaNails.Appointments\RaisaNails.Appointments.csproj" />
+    <ProjectReference Include="..\RaisaNails.Facilities\RaisaNails.Facilities.csproj" />
     <ProjectReference Include="..\RaisaNails.Services\RaisaNails.Services.csproj" />
     <ProjectReference Include="..\RaisaNails.Users\RaisaNails.Users.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Mappings\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace RaisaNails.Services
 {
@@ -6,6 +7,9 @@ namespace RaisaNails.Services
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Description { get; set; }
+        public string Icon { get; set; }
+        public TimeSpan Duration { get; set; }
         public IEnumerable<ServicePrice> Prices { get; set; }
     }
 }
