@@ -8,6 +8,5 @@ namespace RaisaNails.Services
         public double Price { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime EffectiveDate { get; set; }
-        public int ServiceId { get; set; }
     }
 }

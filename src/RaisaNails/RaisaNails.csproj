@@ -4,9 +4,10 @@
     <UserSecretsId>aspnet-RaisaNails-3B362CEA-2E8A-4A80-9697-B56B7008F39F</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
@@ -16,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\RaisaNails.Appointments\RaisaNails.Appointments.csproj" />
     <ProjectReference Include="..\RaisaNails.Data\RaisaNails.Data.csproj" />
+    <ProjectReference Include="..\RaisaNails.Facilities\RaisaNails.Facilities.csproj" />
     <ProjectReference Include="..\RaisaNails.Services\RaisaNails.Services.csproj" />
     <ProjectReference Include="..\RaisaNails.Users\RaisaNails.Users.csproj" />
   </ItemGroup>

@@ -7,9 +7,9 @@ using RaisaNails.Users;
 
 namespace RaisaNails.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<User>
+    public partial class RaisaNailsDbContext : IdentityDbContext<User>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public RaisaNailsDbContext(DbContextOptions<RaisaNailsDbContext> options)
             : base(options)
         {
         }
@@ -19,9 +19,9 @@ namespace RaisaNails.Data
             base.OnModelCreating(builder);
         }
 
-        public DbSet<Service> Services { get; set; }
-        public DbSet<ServicePrice> ServicePrices { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Facility> Facilities { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<ServicePrice> ServicePrices { get; set; }
     }
 }

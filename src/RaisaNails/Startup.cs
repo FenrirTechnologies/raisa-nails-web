@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using RaisaNails.Data;
-using RaisaNails.Services;
 using RaisaNails.Users;
 using RaisaNails.Appointments;
+using RaisaNails.Services;
+using RaisaNails.Data;
 
 namespace RaisaNails
 {
@@ -23,11 +23,11 @@ namespace RaisaNails
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<RaisaNailsDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddEntityFrameworkStores<RaisaNailsDbContext>()
                 .AddDefaultTokenProviders();
 
             services.AddData();
